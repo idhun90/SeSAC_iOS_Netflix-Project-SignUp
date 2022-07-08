@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="Netflix_Project_SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ROo-nL-2SF">
+                                <rect key="frame" x="20" y="194" width="374" height="368"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bsd-wG-8MU">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="46.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqu-a9-dKf">
+                                        <rect key="frame" x="0.0" y="64.5" width="374" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eoV-BE-odT">
+                                        <rect key="frame" x="0.0" y="128.5" width="374" height="46.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1A-Hp-MNG">
+                                        <rect key="frame" x="0.0" y="193" width="374" height="46.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0uK-EE-kou">
+                                        <rect key="frame" x="0.0" y="257.5" width="374" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQ6-Tr-oSj">
+                                        <rect key="frame" x="0.0" y="321.5" width="374" height="46.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2fe-c6-T3d"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7d-XM-YeP">
+                                <rect key="frame" x="20" y="604" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTf-cw-TwE">
+                                <rect key="frame" x="345" y="599" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="systemOrangeColor"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JACKFLIX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvq-Y5-sto">
+                                <rect key="frame" x="132" y="84" width="151" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ROo-nL-2SF" secondAttribute="bottom" constant="300" id="35c-GQ-hLM"/>
+                            <constraint firstItem="UTf-cw-TwE" firstAttribute="centerY" secondItem="I7d-XM-YeP" secondAttribute="centerY" id="51D-0N-oob"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I7d-XM-YeP" secondAttribute="bottom" constant="237" id="Dhc-AG-dnr"/>
+                            <constraint firstItem="I7d-XM-YeP" firstAttribute="leading" secondItem="ROo-nL-2SF" secondAttribute="leading" id="cTy-Qq-wwT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UTf-cw-TwE" secondAttribute="bottom" constant="232" id="jOx-Fe-Kc7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ROo-nL-2SF" secondAttribute="trailing" constant="20" id="mUN-o3-UqT"/>
+                            <constraint firstItem="ROo-nL-2SF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="niX-8P-VVb"/>
+                            <constraint firstItem="UTf-cw-TwE" firstAttribute="trailing" secondItem="ROo-nL-2SF" secondAttribute="trailing" id="pPV-Fo-nYu"/>
+                            <constraint firstItem="ROo-nL-2SF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yXh-io-n5n"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Zg0-0D-GWu" appends="YES" id="t5J-i6-Gxi"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="codeField" destination="0uK-EE-kou" id="1b6-i6-2ln"/>
+                        <outlet property="emailOrPhoneNumberField" destination="Bsd-wG-8MU" id="Har-fB-Xxg"/>
+                        <outlet property="informationLabel" destination="I7d-XM-YeP" id="Mo8-eg-3tF"/>
+                        <outlet property="locationField" destination="y1A-Hp-MNG" id="3b1-sB-MRE"/>
+                        <outlet property="nameField" destination="eoV-BE-odT" id="6FQ-ZA-sBm"/>
+                        <outlet property="passWordField" destination="wqu-a9-dKf" id="oXB-Cf-CCV"/>
+                        <outlet property="signUpButton" destination="PQ6-Tr-oSj" id="vFY-9q-EwX"/>
+                        <outlet property="toggle" destination="UTf-cw-TwE" id="hme-9a-qci"/>
+                        <outletCollection property="textFieldCollection" destination="Bsd-wG-8MU" collectionClass="NSMutableArray" id="qqk-hV-GK6"/>
+                        <outletCollection property="textFieldCollection" destination="wqu-a9-dKf" collectionClass="NSMutableArray" id="5MK-Nk-ha0"/>
+                        <outletCollection property="textFieldCollection" destination="eoV-BE-odT" collectionClass="NSMutableArray" id="xVl-QM-Tcd"/>
+                        <outletCollection property="textFieldCollection" destination="y1A-Hp-MNG" collectionClass="NSMutableArray" id="DpJ-Bm-Jif"/>
+                        <outletCollection property="textFieldCollection" destination="0uK-EE-kou" collectionClass="NSMutableArray" id="NPr-sG-Brs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Zg0-0D-GWu">
+                    <connections>
+                        <action selector="tabCloseKeyboard:" destination="BYZ-38-t0r" id="MEp-sS-BTh"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
