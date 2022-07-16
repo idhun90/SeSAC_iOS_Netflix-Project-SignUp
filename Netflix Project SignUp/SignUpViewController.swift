@@ -13,17 +13,16 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet var textFieldCollection: [UITextField]!
     
+    var checkCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .black
-        
         updateLabelUI()
         updateTextFieldUI()
         updateButtonUI()
         updateToggleUI()
-        
-        
     }
     
     func updateLabelUI() {
@@ -33,7 +32,6 @@ class SignUpViewController: UIViewController {
     }
     
     func updateTextFieldUI() {
-        
         //아울렛 컬렉션으로 대체
         //let textFieldList = [emailOrPhoneNumberField, passWordField, nameField, locationField, codeField]
         
@@ -61,17 +59,15 @@ class SignUpViewController: UIViewController {
     
     
     func updateButtonUI() {
-        
         //signUpButton.configuration = nil // 작성 시 Default가 아닌 Style에서도 폰트 두께 수정 가능, 임시 방편이다.
         signUpButton.setTitle("회원가입", for: .normal)
-        //signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 100) // 작동 안됨, Button style 有关, 정리 필요
+        //signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 100) // 작동 안됨, Button style 有关
         
         signUpButton.setTitleColor(.black, for: .normal)
         signUpButton.setTitleColor(.gray, for: .highlighted)
         signUpButton.backgroundColor = .white
         signUpButton.layer.masksToBounds = true
         signUpButton.layer.cornerRadius = 5
-        
     }
     
     func updateToggleUI() {
@@ -86,40 +82,59 @@ class SignUpViewController: UIViewController {
     
     @IBAction func buttonClicked(_ sender: UIButton) {
         view.endEditing(true)
+        checkCount = 0
         checkList()
+        
+        if checkCount > 0 {
+            alret(title: "회원가입 오류", message: "오류가 발생했습니다.")
+        } else {
+            alret(title: "회원가입 완료", message: "회원가입이 완료되었습니다.")
+        }
+        
+
     }
     
-    func checkList () {
-        
+    func checkList() {
         // 조건1. 이메일 비밀번호 입력 필수
         // 조건2. 비밀번호 최소 6자리 이상
         // 조건3. 추천 코드는 숫자만 입력
         
         guard let text = emailOrPhoneNumberField.text else { return }
         if text.isEmpty {
-            emailOrPhoneNumberField.text = "" // 사용자가 오류를 발견하고 다시 텍스트필드를 탭할 때 해당 문구 초기화 용도
-            emailOrPhoneNumberField.placeholder = "이메일 또는 아이디를 입력하세요."
-            emailOrPhoneNumberField.attributedPlaceholder = NSAttributedString.init(string: emailOrPhoneNumberField.placeholder ?? "이메일 또는 아이디를 입력하세요." , attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemRed])
-            print("오류: 이메일 또는 아이디를 입력하세요.")
+            checkCount += 1
+            placeholderTextField(sender: emailOrPhoneNumberField, text: "이메일 또는 아이디를 입력하세요.")
+//            alret(message: "오류가 발생했습니다.")
         }
         
         guard let passWordCount = passWordField.text?.count else { return }
         if passWordCount < 6 {
-            passWordField.text = ""
-            passWordField.placeholder = "비밀번호는 최소 6자리입니다."
-            passWordField.attributedPlaceholder = NSAttributedString(string: passWordField.placeholder ?? "비밀번호는 최소 6자리입니다." , attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemRed])
-            print("오류: 비밀번호는 최소 6자리입니다.")
+            checkCount += 1
+            placeholderTextField(sender: passWordField, text: "비밀번호는 최소 6자리입니다.")
+//            alret(message: "오류가 발생했습니다.")
         }
         
         guard let code = codeField.text else { return }
         if Int(code) == nil {
-            codeField.text = ""
-            codeField.placeholder = "숫자로만 입력 가능합니다."
-            codeField.attributedPlaceholder = NSAttributedString(string: codeField.placeholder ?? "숫자만 입력 가능합니다." , attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemRed])
-            print("오류: 숫자만 입력 가능합니다.")
+            checkCount += 1
+            placeholderTextField(sender: codeField, text: "숫자로만 입력 가능합니다.")
+//            alret(message: "오류가 발생했습니다.")
         }
+
+    }
+
+    // 조건에 맞지 않을 때 placeholder 내용 갱신
+    func placeholderTextField(sender: UITextField, text: String) {
+        sender.text = ""
+        sender.placeholder = text
+        sender.attributedPlaceholder = NSAttributedString(string: sender.placeholder ?? text, attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemRed])
+        print("오류: \(text)")
     }
     
-    
+    func alret(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
