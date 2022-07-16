@@ -88,12 +88,7 @@ class SignUpViewController: UIViewController {
         if checkCount > 0 {
             alret(title: "회원가입 오류", message: "오류가 발생했습니다.")
         } else {
-            let alert = UIAlertController(title: "회원가입 완료", message: "회원가입이 완료되었습니다.", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .default) { _ in
                 self.performSegue(withIdentifier: "SignUp", sender: self)
-            }
-            present(alert, animated: true, completion: nil)
-            alert.addAction(ok)
         }
     }
     
