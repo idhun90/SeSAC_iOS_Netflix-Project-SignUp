@@ -88,12 +88,18 @@ class SignUpViewController: UIViewController {
         if checkCount > 0 {
             alret(title: "회원가입 오류", message: "오류가 발생했습니다.")
         } else {
-            alret(title: "회원가입 완료", message: "회원가입이 완료되었습니다.")
+            let alert = UIAlertController(title: "회원가입 완료", message: "회원가입이 완료되었습니다.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .default) { _ in
+                self.performSegue(withIdentifier: "SignUp", sender: self)
+            }
+            present(alert, animated: true, completion: nil)
+            alert.addAction(ok)
         }
-        
-
     }
     
+    @IBAction func unwindToSignUpViewController(segue: UIStoryboardSegue){
+        
+    }
     func checkList() {
         // 조건1. 이메일 비밀번호 입력 필수
         // 조건2. 비밀번호 최소 6자리 이상
@@ -119,7 +125,6 @@ class SignUpViewController: UIViewController {
             placeholderTextField(sender: codeField, text: "숫자로만 입력 가능합니다.")
 //            alret(message: "오류가 발생했습니다.")
         }
-
     }
 
     // 조건에 맞지 않을 때 placeholder 내용 갱신
@@ -136,5 +141,7 @@ class SignUpViewController: UIViewController {
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
     }
+    
+    
 }
 
