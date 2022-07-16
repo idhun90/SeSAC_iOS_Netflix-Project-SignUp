@@ -13,9 +13,11 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var OkButton: UIButton!
     
     override func viewDidLoad() {
+        let nickName = UserDefaults.standard.string(forKey: "nickName") ?? "회원님"
+        
         super.viewDidLoad()
         designOkButton()
-        resultLabel.text = "ㅇㅇ님 회원가입을 축하드립니다."
+        resultLabel.text = "\(nickName)님 회원가입을 축하드립니다."
         resultLabel.textColor = .white
         view.backgroundColor = .black
     }

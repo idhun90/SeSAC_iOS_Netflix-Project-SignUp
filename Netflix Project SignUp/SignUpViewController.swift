@@ -81,12 +81,16 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func buttonClicked(_ sender: UIButton) {
+        
+        UserDefaults.standard.set(nameField.text, forKey: "nickName")
+        print("닉네임 \(nameField.text!)가 저장되었습니다.")
+        
         view.endEditing(true)
         checkCount = 0
         checkList()
         
         if checkCount > 0 {
-            alret(title: "회원가입 오류", message: "오류가 발생했습니다.")
+            alret(title: "회원가입 오류", message: "입력한 정보를 확인해주세요.")
         } else {
                 self.performSegue(withIdentifier: "SignUp", sender: self)
         }
