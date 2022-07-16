@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146FD48E2882FE0600746D9F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FD48D2882FE0600746D9F /* SecondViewController.swift */; };
 		1482878C28754B8400E273E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482878B28754B8400E273E4 /* AppDelegate.swift */; };
 		1482878E28754B8400E273E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482878D28754B8400E273E4 /* SceneDelegate.swift */; };
 		1482879328754B8400E273E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1482879128754B8400E273E4 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		146FD48D2882FE0600746D9F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1482878828754B8400E273E4 /* Netflix Project SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Project SignUp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1482878B28754B8400E273E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1482878D28754B8400E273E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				1482878B28754B8400E273E4 /* AppDelegate.swift */,
 				1482878D28754B8400E273E4 /* SceneDelegate.swift */,
 				1482879128754B8400E273E4 /* Main.storyboard */,
+				146FD48D2882FE0600746D9F /* SecondViewController.swift */,
 				1482879F28754BD500E273E4 /* SignUpViewController.swift */,
 				1482879428754B8500E273E4 /* Assets.xcassets */,
 				1482879628754B8500E273E4 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146FD48E2882FE0600746D9F /* SecondViewController.swift in Sources */,
 				148287A028754BD500E273E4 /* SignUpViewController.swift in Sources */,
 				1482878C28754B8400E273E4 /* AppDelegate.swift in Sources */,
 				1482878E28754B8400E273E4 /* SceneDelegate.swift in Sources */,
